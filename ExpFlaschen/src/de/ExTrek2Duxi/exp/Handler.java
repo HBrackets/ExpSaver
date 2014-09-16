@@ -13,7 +13,7 @@ public class Handler implements Listener {
 		if (e.getBlock().getType().equals(Material.ENCHANTMENT_TABLE)) {
 			if (e.getPlayer().getItemInHand().getType().equals(Material.GLASS_BOTTLE)) {
 				float lvl = e.getPlayer().getExp();
-				if (lvl <= 100) {
+				if (lvl >= 100) {
 					e.getPlayer().setExp(lvl-100);
 					e.getPlayer().getInventory().addItem(new ItemStack(Material.EXP_BOTTLE,10));
 					e.getPlayer().sendMessage(ChatColor.AQUA+"Du hast 100 Erfahrung benutzt um 10 Exp-Flasche herzustellen!");
